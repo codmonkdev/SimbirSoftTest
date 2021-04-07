@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SimbirSoftTest.Logger;
+using System;
+using System.IO;
 
 namespace SimbirSoftTest
 {
@@ -6,7 +8,9 @@ namespace SimbirSoftTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ALogger Logger = LogBuilder.buildLog(ALogger.DEBUG);
+
+            Logger.message("Hello World!",ALogger.DEBUG);
         }
     }
 }
