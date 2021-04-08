@@ -6,7 +6,7 @@ namespace SimbirSoftTest.Logger
 {
     abstract public class ALogger
     {
-
+        public static int INF = 1;
         public static int ERR = 3;
         public static int NOTICE = 5;
         public static int DEBUG = 7;

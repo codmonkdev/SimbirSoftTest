@@ -7,11 +7,11 @@ namespace SimbirSoftTest.Logger
 {
     public class LogBuilder
     {
-        static public ALogger buildLog(int mask)
+        static public ALogger buildLog()
         {
             ALogger aLogger, aLogger1;
-            aLogger = new ConsoleLogger(mask);
-            aLogger1 = new FileLogger(mask,Path.Combine(AppContext.BaseDirectory, "Log.log"));
+            aLogger = new ConsoleLogger(ALogger.INF);
+            aLogger1 = new FileLogger(ALogger.DEBUG, Path.Combine(AppContext.BaseDirectory, "Log.log"));
             aLogger.setNext(aLogger1);
             return aLogger;
 
