@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SimbirSoftTest.Logger
 {
+    /// <summary>
+    /// Логгер в файл
+    /// </summary>
     class FileLogger : ALogger
     {
         protected string filePathName;

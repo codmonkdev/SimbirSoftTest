@@ -4,6 +4,9 @@ using System.Text;
 
 namespace SimbirSoftTest.Logger
 {
+    /// <summary>
+    /// Логгер в консоль
+    /// </summary>
     public class ConsoleLogger : ALogger
     {
         public ConsoleLogger(int mask)

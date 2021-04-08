@@ -11,6 +11,7 @@ namespace SimbirSoftTest
     {
         static void Main(string[] args)
         {
+            //объвим переменные
             ALogger Logger = null;
             ITextDownloader textDownloaderAgility;
             ATextParser textParser;
@@ -18,6 +19,7 @@ namespace SimbirSoftTest
             string textFromUrl;
             try
             {
+                //инициализируем лог
                 try
                 {
                     Logger = LogBuilder.buildLog();
@@ -27,7 +29,7 @@ namespace SimbirSoftTest
                 {
                     throw new Exception("Err build logger " + "\n" + e.Message);
                 }
-
+                //получаем ссылку на сайт
                 try
                 {
                     Console.WriteLine("Enter url for parse words:");
@@ -40,7 +42,7 @@ namespace SimbirSoftTest
                     throw new Exception("Err enter url " + "\n" + e.Message);
                 }         
 
-                
+                //получаем текст с сайта
                 try
                 {
                     textDownloaderAgility = new TextDownloaderAgility();
@@ -54,6 +56,7 @@ namespace SimbirSoftTest
                     throw new Exception("Err download text from " + url + "\n" + e.Message);
                 }
 
+                //разбираем текст на слова
                 try
                 {
                     char[] delimetrs = { ' ', ',', '.', '!', '?', '"', ';', ':', '[', ']', '(', ')', '\n', '\r', '\t' };
@@ -80,7 +83,7 @@ namespace SimbirSoftTest
                 {
                     Logger.message(e.Message, ALogger.ERR);
                 }
-                else
+                else//если упало на инициализации логгера
                 {
                     Console.WriteLine(e.Message);
                 }

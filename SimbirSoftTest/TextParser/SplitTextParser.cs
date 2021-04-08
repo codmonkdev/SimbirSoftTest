@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SimbirSoftTest.TextParser
 {
+    /// <summary>
+    /// Класс для рабора текста на слова при помощи метода Split
+    /// </summary>
     public class SplitTextParser : ATextParser
     {
 

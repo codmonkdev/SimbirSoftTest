@@ -4,6 +4,9 @@ using System.Text;
 
 namespace SimbirSoftTest.Logger
 {
+    /// <summary>
+    /// Абстрактный класс логгера
+    /// </summary>
     abstract public class ALogger
     {
         public static int INF = 1;

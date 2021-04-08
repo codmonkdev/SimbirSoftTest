@@ -1,12 +1,14 @@
 ﻿using HtmlAgilityPack;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace SimbirSoftTest.TextDownloader
 {
+    /// <summary>
+    /// Класс для загрузки текста с url при помощи библиотеки HtmlAgilityPack
+    /// Реализует интерфейс ITextDownloader
+    /// </summary>
     public class TextDownloaderAgility : ITextDownloader
     {
         public string downloadText(string url)

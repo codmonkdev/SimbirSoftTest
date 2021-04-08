@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SimbirSoftTest.Logger
 {
+    /// <summary>
+    /// Построитель логгера
+    /// </summary>
     public class LogBuilder
     {
         static public ALogger buildLog()
