@@ -12,14 +12,18 @@ namespace SimbirSoftTest.Logger
         {
             this.mask = mask;
             this.filePathName = filePathName;
-        }
-        protected override void writeMessage(string msg)
-        {
             if (File.Exists(filePathName))
             {
                 File.Delete(filePathName);
             }
             using (StreamWriter sw = File.CreateText(filePathName))
+            {
+                sw.WriteLine("==StartLog==");
+            }
+        }
+        protected override void writeMessage(string msg)
+        {
+            using (StreamWriter sw = new StreamWriter(filePathName, true))
             {
                 sw.WriteLine(msg);
             }
